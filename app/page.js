@@ -1,11 +1,11 @@
 const capabilities = [
   {
     title: "FPGA Development",
-    body: "Architecture, HDL implementation, timing-aware design, platform integration, debugging, and field deployment support."
+    body: "Architecture, Requirement analysis, HDL implementation, timing-aware design, critical path resolution, platform integration, debugging, and field deployment support."
   },
   {
     title: "Embedded Systems",
-    body: "Low-level firmware, hardware bring-up, peripheral control, device communication, monitoring, and FPGA-connected systems."
+    body: "Low-level firmware, bare-metal, hardware bring-up, peripheral control, device communication, SPI , UART, I2C, monitoring, and FPGA-connected systems."
   },
   {
     title: "Verilog and VHDL",
@@ -16,8 +16,12 @@ const capabilities = [
     body: "Protocol-specific interface logic, signal timing analysis, position feedback integration, validation, and fault investigation for serial encoders including EnDat, BiSS, and HIPERFACE DSL."
   },
   {
-    title: "Industrial Functional Safety",
-    body: "Integration of functional safety systems and black channel safety concepts for encoder and control interfaces, including FSoE, SIL-oriented design work, STO, SS1, safety I/O, diagnostics, and validation workflows."
+    title: "Functional Safety SIL2&SIL3",
+    body: "Integration of functional safety systems and black channel safety concepts for encoder Endat BiSS HDSL and control interfaces, including FSoE, SIL-oriented design work, STO, SS1, safety I/O, diagnostics, and validation workflows."
+  },
+  {
+    title: "Custom Application",
+    body: "Custom Embedded Application to meet customer's demanding work flow , split work load from Embedded to FPGA, and provide a complete solution for the customer."
   },
   {
     title: "Altera / Intel FPGA",
@@ -25,7 +29,7 @@ const capabilities = [
   },
   {
     title: "Telecommunication Network Drafting",
-    body: "AutoCAD and BricsCAD drafting support for telecommunications network plans, design documentation, markups, and drawing production."
+    body: "AutoCAD and BricsCAD drafting support for telecommunications network plans, impact analysis, design documentation, markups, and drawing production."
   },
   {
     title: "AutoCAD / BricsCAD and LISP",
@@ -174,7 +178,7 @@ export default function Home() {
           <div className="product-copy">
             <div>
               <p className="eyebrow">Product</p>
-              <h2>SLD Accelerator Solution, a force multiplier for telecom relocation industry.</h2>
+              <h2>SLD Accelerator Platform, a force multiplier for telecom industry.</h2>
             </div>
             <div className="product-panel">
               <h3>SLD Accelerator</h3>
