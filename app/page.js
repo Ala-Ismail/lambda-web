@@ -167,18 +167,18 @@ export default function Home() {
             <div className="section-heading">
               <div>
                 <p className="eyebrow">Products &amp; projects</p>
-                <h2>Tools for engineering drawings</h2>
+                <h2>Tools for engineering drawings and models</h2>
               </div>
             </div>
             <div className="product-grid">
               <article className="product-card">
-                <div className="product-image converter-image">
+                <div className="product-image product-screenshot">
                   <Image
                     src="/images/12daz-converter.webp"
                     alt="12dAZ Converter showing a road plan and DXF export settings"
                     width={1200}
                     height={742}
-                    sizes="(max-width: 780px) 95vw, 49vw"
+                    sizes="(max-width: 780px) 95vw, 33vw"
                   />
                 </div>
                 <div className="card-copy">
@@ -201,7 +201,7 @@ export default function Home() {
                     src="/images/ccmap-synthetic-satellite.webp"
                     alt="Illustrated CADCraft workspace showing yellow property boundaries over fictional satellite imagery"
                     fill
-                    sizes="(max-width: 780px) 95vw, 49vw"
+                    sizes="(max-width: 780px) 95vw, 33vw"
                   />
                   <figcaption>Illustrative CADCraft view</figcaption>
                 </figure>
@@ -221,6 +221,34 @@ export default function Home() {
                     </a>
                     <a className="text-link" href="https://github.com/Ala-Ismail/CCMap#map-backgrounds">
                       Map setup <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+              <article className="product-card">
+                <div className="product-image product-screenshot">
+                  <Image
+                    src="/images/slx-viewer.webp"
+                    alt="SLX Viewer showing an example PID speed control diagram and its block properties"
+                    width={1536}
+                    height={1024}
+                    sizes="(max-width: 780px) 95vw, 33vw"
+                  />
+                </div>
+                <div className="card-copy">
+                  <p className="eyebrow">Lambda Technologies product</p>
+                  <h3>SLX Viewer</h3>
+                  <p>
+                    An open-source, read-only Windows app for inspecting saved Simulink <code>.slx</code>{" "}
+                    models offline. Browse subsystems, trace signals and inspect block properties without
+                    installing MATLAB or Simulink.
+                  </p>
+                  <div className="product-links">
+                    <a className="text-link" href="https://slxviewer-website.vercel.app/">
+                      Visit SLX Viewer <span aria-hidden="true">↗</span>
+                    </a>
+                    <a className="text-link" href="https://github.com/Ala-Ismail/slx_viewer">
+                      View source on GitHub <span aria-hidden="true">↗</span>
                     </a>
                   </div>
                 </div>
