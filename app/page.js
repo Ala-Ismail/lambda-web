@@ -221,9 +221,6 @@ export default function Home() {
                     <a className="text-link" href="https://github.com/Ala-Ismail/CCMap#map-backgrounds">
                       Map setup <span aria-hidden="true">↗</span>
                     </a>
-                    <a className="text-link" href="https://lnkd.in/p/gkeMVmf9">
-                      See the map example on LinkedIn <span aria-hidden="true">↗</span>
-                    </a>
                   </div>
                 </div>
               </article>

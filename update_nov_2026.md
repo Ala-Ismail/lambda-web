@@ -33,8 +33,6 @@ Add a project card alongside the 12dAZ Converter entry. Credit the ArtCraft team
 
 Illustrate the fork’s enhancement with yellow property boundaries over fictional satellite imagery in a CADCraft-style workspace. Caption the graphic “Illustrative CADCraft view”.
 
-Link to the LinkedIn post showing CADCraft with a map background. [See the map example on LinkedIn](https://lnkd.in/p/gkeMVmf9)
-
 Suggested website copy
 
 > CADCraft is an open-source drafting application created by the ArtCraft team. Lambda Technologies forked it as CCMap to develop experimental map backgrounds, including OpenStreetMap streets, Google satellite view and Esri World Imagery. The maps provide a view-only reference that can align with Australian MGA coordinates while leaving drawing geometry and exports unchanged.
@@ -66,4 +64,4 @@ Use the same capability wording in the hero summary and review the Services and 
 1. Extract the slideshow into a small client component used by `app/page.js`. Update `app/globals.css` for the hero layout, responsive image crops, controls and reduced-motion behaviour. Store any new images in `public/images/`.
 2. Update the Products and Capabilities sections in `app/page.js`. Review the hero, Services and About copy for consistency, and check the homepage for any remaining links to the former product site.
 3. Run `npm run build`. Check the homepage on desktop and mobile for readable hero text, stable layout, exactly three slides, working keyboard controls and correct reduced-motion behaviour.
-4. Follow the Products navigation link and check the links to the 12dAZ Converter site, the CCMap GitHub fork and the LinkedIn map example. Confirm that the CCMap integration is labelled experimental and the old SLD Accelerator URL is absent from the rendered homepage.
+4. Follow the Products navigation link and check the links to the 12dAZ Converter site, the CCMap GitHub fork and the map setup documentation. Confirm that the CCMap integration is labelled experimental and the old SLD Accelerator URL is absent from the rendered homepage.
