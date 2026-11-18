@@ -185,8 +185,8 @@ export default function Home() {
                   <p className="eyebrow">Lambda Technologies product</p>
                   <h3>12dAZ Converter</h3>
                   <p>
-                    Convert 12d Model survey files in <code>.12daz</code> and <code>.12da</code> format to
-                    2D and 3D DXF for use in CAD.
+                    An open-source application available to the public for converting 12d Model survey
+                    files in <code>.12daz</code> and <code>.12da</code> format to 2D and 3D DXF for use in CAD.
                   </p>
                   <div className="product-links">
                     <a className="text-link" href="https://12daz-app-website.vercel.app/">
