@@ -10,7 +10,7 @@ const capabilityImages = {
 const heroSlides = [
   { label: "FPGA development", image: capabilityImages.fpga, position: "68% center" },
   { label: "Telecommunications", image: capabilityImages.telecom, position: "72% center" },
-  { label: "CAD & civil infrastructure", image: capabilityImages.cad, position: "70% center" }
+  { label: "CAD & civil infrastructure", image: "/images/cad-infrastructure-collage.webp", position: "72% center" }
 ];
 
 const capabilities = [

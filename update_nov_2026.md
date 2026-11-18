@@ -12,7 +12,7 @@ Replace the single background image at the top of the homepage with exactly thre
 | --- | --- | --- |
 | 1 | FPGA development | Show an FPGA development board being tested on an electronics workbench. |
 | 2 | Telecommunications | Show a field technician inspecting fibre equipment at a telecommunications site. |
-| 3 | CAD and civil infrastructure | Show a civil CAD workspace with a road and drainage plan visible on screen. |
+| 3 | CAD and civil infrastructure | Blend a 12dAZ-style DXF survey drawing with a CCMap-style satellite view of the same fictional site. Keep the road, survey points and mapped property boundaries visible in the mobile crop. |
 
 - Use a subtle crossfade and a dark overlay that keeps text and controls readable on every image.
 - Provide previous and next buttons, three slide selectors and a pause/play control. Make them keyboard-accessible and clearly indicate the current slide.
