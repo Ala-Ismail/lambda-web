@@ -5,11 +5,11 @@ const siteUrl = "https://www.lambdatechaus.com";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Lambda Technologies Pty Ltd | FPGA, Embedded Systems and Engineering Automation",
+    default: "Lambda Technologies | FPGA, CAD Automation and Telecom Drafting",
     template: "%s | Lambda Technologies Pty Ltd"
   },
   description:
-    "Lambda Technologies Pty Ltd provides specialist FPGA development, embedded systems, Verilog, VHDL, serial encoder protocols, EnDat, BiSS, HIPERFACE DSL, black channel safety, integration of functional safety systems, industrial functional safety, FSoE, SIL, STO, SS1, Altera FPGA, Remote System Update, telecommunication network drafting, AutoCAD, BricsCAD and LISP development services.",
+    "Australian engineering support for FPGA and embedded systems, CAD automation and telecommunications drafting. Explore 12dAZ Converter and CCMap for CADCraft.",
   keywords: [
     "FPGA development",
     "embedded systems",
@@ -33,6 +33,8 @@ export const metadata = {
     "telecommunication network drafting",
     "AutoCAD LISP",
     "BricsCAD",
+    "12dAZ Converter",
+    "CCMap",
     "engineering automation",
     "Australia"
   ],
@@ -44,14 +46,14 @@ export const metadata = {
     url: siteUrl,
     title: "Lambda Technologies Pty Ltd",
     description:
-      "Specialist engineering for FPGA, embedded systems, HDL development, serial protocols, industrial functional safety, remote update workflows, telecom drafting, and CAD automation.",
+      "FPGA and embedded development, CAD automation, telecommunications drafting and custom engineering software.",
     siteName: "Lambda Technologies Pty Ltd",
     images: [
       {
-        url: "/images/lambda-engineering-hero.png",
-        width: 1536,
-        height: 1024,
-        alt: "FPGA and embedded systems engineering workspace"
+        url: "/images/fpga-development-hero.webp",
+        width: 1440,
+        height: 810,
+        alt: "FPGA development board being probed at an electronics workbench"
       }
     ]
   }

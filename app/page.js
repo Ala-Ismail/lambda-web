@@ -1,282 +1,270 @@
+import Image from "next/image";
+import HeroSlideshow from "./hero-slideshow";
+
+const capabilityImages = {
+  fpga: "/images/fpga-development-hero.webp",
+  telecom: "/images/telecommunications-hero.webp",
+  cad: "/images/cad-drafting-hero.webp"
+};
+
+const heroSlides = [
+  { label: "FPGA development", image: capabilityImages.fpga, position: "68% center" },
+  { label: "Telecommunications", image: capabilityImages.telecom, position: "72% center" },
+  { label: "CAD & civil infrastructure", image: capabilityImages.cad, position: "70% center" }
+];
+
 const capabilities = [
   {
-    title: "FPGA and Embedded Systems",
-    body: "Architecture, HDL, firmware, hardware bring-up, interface control, timing-aware design, debugging, and deployment support for complex connected systems."
+    title: "FPGA and embedded systems",
+    body: "We develop Verilog and VHDL designs, write embedded firmware, and support hardware bring-up, timing closure and system integration.",
+    image: capabilityImages.fpga
   },
   {
-    title: "CAD and Drafting Automation",
-    body: "AutoCAD, BricsCAD, LISP, drawing automation, data extraction, markups, and practical tooling for teams producing technical documentation."
+    title: "CAD and drafting automation",
+    body: "We build AutoCAD and BricsCAD tools, including LISP routines, to automate drawing production, extract drawing data and process markups.",
+    image: capabilityImages.cad
   },
   {
-    title: "Telecommunication Networks",
-    body: "Network drafting support, design documentation, impact analysis, drawing production, workflow improvement, and delivery support for telecom projects."
+    title: "Telecommunications drafting",
+    body: "We prepare network drawings and Single Line Diagrams, document proposed changes and assess their impact on existing designs.",
+    image: capabilityImages.telecom
   },
   {
-    title: "SLD Accelerator",
-    body: "Single Line Diagram workflow acceleration through Lambda Technologies' SLD Accelerator product, helping telecom teams produce clearer outputs faster."
+    title: "Interfaces and protocols",
+    body: "We implement and validate SPI, UART and I²C interfaces and serial encoder protocols including EnDat, BiSS and HIPERFACE DSL."
   },
   {
-    title: "Protocol and Interface Work",
-    body: "Maintainable Verilog and VHDL, serial encoder interfaces, SPI, UART, I2C, EnDat, BiSS, HIPERFACE DSL, validation support, and fault investigation."
+    title: "Functional safety engineering support",
+    body: "We support the design, integration and validation of industrial safety functions and communications, including FSoE, safe torque off (STO), safe stop 1 (SS1) and safety I/O diagnostics."
   },
   {
-    title: "Functional Safety Support",
-    body: "Support for SIL-oriented design work, black channel safety concepts, FSoE, STO, SS1, safety I/O, diagnostics, and validation workflows."
+    title: "Altera and Intel FPGA platforms",
+    body: "We develop and maintain Quartus projects, support migrations and design Remote System Update workflows."
   },
   {
-    title: "Altera / Intel FPGA",
-    body: "Quartus-based development, configuration workflows, migration support, Remote System Update, and legacy Altera project maintenance."
-  },
-  {
-    title: "Custom Applications",
-    body: "Purpose-built software and automation that fits customer workflows, connects technical systems, and turns specialist knowledge into repeatable tools."
+    title: "Custom engineering software",
+    body: "We build tools that connect engineering systems, convert files and automate repeatable project tasks."
   }
 ];
 
 const services = [
-  "FPGA, HDL, and embedded development",
-  "CAD drafting and drawing automation",
-  "Telecommunication network drafting",
-  "Single Line Diagram workflow acceleration",
-  "Interface and protocol implementation",
-  "Functional safety support",
-  "Remote update architecture",
-  "System debugging and integration",
-  "Legacy design support",
-  "AutoCAD, BricsCAD, and LISP tooling"
+  {
+    title: "Design and delivery",
+    body: "Bring us in for a defined engineering, drafting or automation package, from initial scoping through implementation and handover."
+  },
+  {
+    title: "Integration and troubleshooting",
+    body: "Get focused support with hardware bring-up, interface validation, fault investigation or a difficult system integration."
+  },
+  {
+    title: "Maintenance and migration",
+    body: "Keep existing designs working with legacy FPGA support, remote update planning, and improvements to drafting and software workflows."
+  }
 ];
 
-const applications = [
-  "Industrial control systems",
-  "Embedded product support",
-  "FPGA-connected platforms",
-  "Telecommunication network drafting",
-  "Single Line Diagram workflows",
-  "Engineering CAD workflows",
-  "Functional safety systems",
-  "Legacy technical systems"
+const navigation = [
+  ["Capabilities", "#capabilities"],
+  ["Services", "#services"],
+  ["Products", "#products"],
+  ["About", "#about"],
+  ["Contact", "#contact"]
 ];
-
-const embeddedDomain = ["FPGA logic", "Embedded firmware", "Interfaces and safety"];
-const deliveryDomain = ["Telecom networks", "CAD drafting", "Single Line Diagrams"];
 
 export default function Home() {
   return (
-    <main>
-      <header className="site-header" aria-label="Primary navigation">
-        <a className="brand" href="#top" aria-label="Lambda Technologies home">
-          <span className="brand-mark">&lambda;</span>
-          <span>
-            <strong>Lambda Technologies</strong>
-            <small>Pty Ltd</small>
-          </span>
-        </a>
-        <nav>
-          <a href="#capabilities">Capabilities</a>
-          <a href="#services">Services</a>
-          <a href="#products">Products</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
+    <>
+      <header id="top" className="site-header">
+        <div className="wrap header-inner">
+          <a className="brand" href="#top" aria-label="Lambda Technologies home">
+            <span className="brand-mark" aria-hidden="true">&lambda;</span>
+            <span>
+              <strong>Lambda Technologies</strong>
+              <small>Pty Ltd</small>
+            </span>
+          </a>
+          <nav className="site-nav" aria-label="Primary">
+            {navigation.map(([label, href]) => (
+              <a key={href} href={href}>{label}</a>
+            ))}
+          </nav>
+        </div>
       </header>
 
-      <section id="top" className="hero">
-        <div className="hero-image" />
-        <div className="hero-overlay" />
-        <div className="hero-content">
-          <div className="hero-copy-block">
-            <p className="eyebrow">Engineering software, drafting, and network solutions</p>
-            <h1>A practical technical partner for complex project delivery.</h1>
-            <p className="hero-copy">
-              Lambda Technologies helps teams solve connected engineering problems across FPGA and
-              embedded systems, CAD drafting, telecommunication network work, and Single Line Diagram
-              delivery through SLD Accelerator.
-            </p>
-            <div className="hero-actions">
-              <a className="button primary" href="mailto:info@lambdatechaus.com">
-                Discuss a project
-              </a>
-              <a className="button secondary" href="#capabilities">
-                View capabilities
-              </a>
-            </div>
-          </div>
-
-          <div className="hero-graphic" aria-label="Lambda Technologies solution areas">
-            <div className="domain-map">
-              <div className="domain-column embedded-domain">
-                <span className="domain-label">Technical Systems</span>
-                <h2>Embedded + FPGA</h2>
-                <ul>
-                  {embeddedDomain.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="domain-bridge" aria-hidden="true">
-                <span className="bridge-line" />
-                <div className="bridge-hub">
-                  <span>Lambda</span>
-                  <strong>Custom software + automation</strong>
-                </div>
-                <span className="bridge-line" />
-              </div>
-
-              <div className="domain-column delivery-domain">
-                <span className="domain-label">Delivery Outputs</span>
-                <h2>Telecom + CAD</h2>
-                <ul>
-                  {deliveryDomain.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="intro band">
-        <div className="section-inner split">
-          <div>
-            <p className="eyebrow">What We Do</p>
-            <h2>Balanced support across technical systems, drawings, and delivery workflows.</h2>
-          </div>
-          <p>
-            Engineering delivery rarely sits in one neat layer. Lambda Technologies can work close
-            to the hardware when needed, then step into CAD, drafting, telecom documentation, and
-            automation when the project needs clearer outputs and repeatable processes.
+      <main>
+        <HeroSlideshow slides={heroSlides}>
+          <p className="eyebrow">Engineering &amp; automation</p>
+          <h1>From embedded systems to engineering drawings.</h1>
+          <p className="hero-summary">
+            Lambda Technologies designs and integrates FPGA and embedded systems, automates CAD
+            workflows, and produces technical documentation for telecommunications networks.
           </p>
-        </div>
-      </section>
+          <div className="hero-actions">
+            <a className="button button-primary" href="mailto:info@lambdatechaus.com">
+              Discuss a project <span aria-hidden="true">↗</span>
+            </a>
+            <a className="button button-secondary" href="#capabilities">
+              View capabilities <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </HeroSlideshow>
 
-      <section id="capabilities" className="section">
-        <div className="section-inner">
-          <div className="section-heading">
-            <p className="eyebrow">Capabilities</p>
-            <h2>Specialist capability presented as a practical project partner.</h2>
-          </div>
-          <div className="capability-grid">
-            {capabilities.map((item) => (
-              <article className="capability-card" key={item.title}>
-                <span className="card-index" aria-hidden="true">
-                  {item.title.slice(0, 2).toUpperCase()}
-                </span>
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="services" className="band">
-        <div className="section-inner services-layout">
-          <div>
-            <p className="eyebrow">Services</p>
-            <h2>Support from first investigation through drawings, tools, and deployment.</h2>
-            <p>
-              Work can be scoped as complete solution delivery, targeted technical assistance,
-              drafting support, automation, design review, legacy support, or focused debugging for
-              difficult integration problems.
-            </p>
-          </div>
-          <ul className="service-list" aria-label="Engineering services">
-            {services.map((service) => (
-              <li key={service}>{service}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="section-inner">
-          <div className="section-heading">
-            <p className="eyebrow">Applications</p>
-            <h2>Useful where technical accuracy and clear delivery both matter.</h2>
-          </div>
-          <div className="application-strip">
-            {applications.map((application) => (
-              <span key={application}>{application}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="products" className="band product-band">
-        <div className="product-background" />
-        <div className="product-overlay" />
-        <div className="section-inner product-layout">
-          <div className="product-copy">
-            <div>
-              <p className="eyebrow">Product</p>
-              <h2>SLD Accelerator for faster Single Line Diagram delivery.</h2>
-            </div>
-            <div className="product-panel">
-              <h3>SLD Accelerator</h3>
+        <section id="capabilities" className="section">
+          <div className="wrap">
+            <div className="section-heading">
+              <div>
+                <p className="eyebrow">Capabilities</p>
+                <h2>FPGA development, CAD automation and telecom drafting</h2>
+              </div>
               <p>
-                SLD Accelerator by Lambda Technologies Pty Ltd supports telecommunications teams
-                with practical Single Line Diagram automation, drafting workflow acceleration, and
-                clearer network delivery processes.
+                We help engineering teams bring up new hardware, diagnose integration issues,
+                automate drawing production and maintain existing systems.
               </p>
-              <a className="product-link" href="https://www.sld-accelerator.com/">
-                Visit sld-accelerator.com
-              </a>
+            </div>
+            <div className="capability-grid">
+              {capabilities.slice(0, 3).map(({ title, body, image }) => (
+                <article className="capability-card" key={title}>
+                  <div className="capability-image">
+                    <Image src={image} alt="" fill sizes="(max-width: 680px) 100vw, 33vw" />
+                  </div>
+                  <div className="card-copy">
+                    <h3>{title}</h3>
+                    <p>{body}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div className="specialty-grid">
+              {capabilities.slice(3).map(({ title, body }) => (
+                <article key={title}>
+                  <h3>{title}</h3>
+                  <p>{body}</p>
+                </article>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="about" className="band about-band">
-        <div className="section-inner split">
-          <div>
-            <p className="eyebrow">About</p>
-            <h2>Approachable engineering depth for real delivery constraints.</h2>
+        <section id="services" className="section services-section">
+          <div className="wrap services-layout">
+            <div>
+              <p className="eyebrow">Services</p>
+              <h2>Support at every stage of delivery</h2>
+            </div>
+            <div className="service-list">
+              {services.map(({ title, body }) => (
+                <article key={title}>
+                  <h3>{title}</h3>
+                  <p>{body}</p>
+                </article>
+              ))}
+            </div>
           </div>
-          <div className="copy-stack">
-            <p>
-              Lambda Technologies Pty Ltd provides technology-focused engineering support across
-              FPGA development, embedded systems, HDL design, CAD automation, telecommunication
-              network drafting, SLD Accelerator, Altera FPGA platforms, Remote System Update
-              workflows, and functional safety support.
-            </p>
-            <p>
-              The approach is direct and collaborative: understand the project, identify the
-              constraints, choose the right technical path, and deliver work that customers can use
-              and maintain after handover.
-            </p>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="contact" className="contact-section">
-        <div className="section-inner contact-layout">
-          <div>
-            <p className="eyebrow">Contact</p>
-            <h2>Need a technical partner for engineering, drafting, or network delivery?</h2>
+        <section id="products" className="section">
+          <div className="wrap">
+            <div className="section-heading">
+              <div>
+                <p className="eyebrow">Products &amp; projects</p>
+                <h2>Tools for engineering drawings</h2>
+              </div>
+            </div>
+            <div className="product-grid">
+              <article className="product-card">
+                <div className="product-image converter-image">
+                  <Image
+                    src="/images/12daz-converter.webp"
+                    alt="12dAZ Converter showing a road plan and DXF export settings"
+                    width={1200}
+                    height={742}
+                    sizes="(max-width: 780px) 95vw, 49vw"
+                  />
+                </div>
+                <div className="card-copy">
+                  <p className="eyebrow">Lambda Technologies product</p>
+                  <h3>12dAZ Converter</h3>
+                  <p>
+                    Convert 12d Model survey files in <code>.12daz</code> and <code>.12da</code> format to
+                    2D and 3D DXF for use in CAD.
+                  </p>
+                  <div className="product-links">
+                    <a className="text-link" href="https://12daz-app-website.vercel.app/">
+                      Visit 12dAZ Converter <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+              <article className="product-card">
+                <figure className="product-image ccmap-image">
+                  <Image
+                    src="/images/ccmap-synthetic-satellite.webp"
+                    alt="Illustrated CADCraft workspace showing yellow property boundaries over fictional satellite imagery"
+                    fill
+                    sizes="(max-width: 780px) 95vw, 49vw"
+                  />
+                  <figcaption>Illustrative CADCraft view</figcaption>
+                </figure>
+                <div className="card-copy">
+                  <p className="eyebrow">Experimental CADCraft integration</p>
+                  <h3>CCMap</h3>
+                  <p>
+                    CADCraft is an open-source drafting application created by the ArtCraft team.
+                    Lambda Technologies forked it as CCMap to develop experimental map backgrounds,
+                    including OpenStreetMap streets, Google satellite view and Esri World Imagery.
+                    The maps provide a view-only reference that can align with Australian MGA
+                    coordinates while leaving drawing geometry and exports unchanged.
+                  </p>
+                  <div className="product-links">
+                    <a className="text-link" href="https://github.com/Ala-Ismail/CCMap">
+                      View CCMap on GitHub <span aria-hidden="true">↗</span>
+                    </a>
+                    <a className="text-link" href="https://github.com/Ala-Ismail/CCMap#map-backgrounds">
+                      Map setup <span aria-hidden="true">↗</span>
+                    </a>
+                    <a className="text-link" href="https://lnkd.in/p/gkeMVmf9">
+                      See the map example on LinkedIn <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="about-section">
+          <div className="wrap about-layout">
+            <div>
+              <p className="eyebrow">About</p>
+              <h2>Engineering support from Australia</h2>
+            </div>
             <p>
-              Contact Lambda Technologies Pty Ltd to discuss your project, integration challenge,
-              network drafting work, Single Line Diagram workflow, legacy system, or engineering
-              automation requirement.
+              Lambda Technologies Pty Ltd works with teams across embedded development,
+              CAD automation and telecommunications drafting. We work through the constraints
+              with your team and deliver designs, drawings or software you can maintain after handover.
             </p>
           </div>
-          <div className="contact-panel">
-            <a className="contact-link" href="mailto:info@lambdatechaus.com">
-              info@lambdatechaus.com
+        </section>
+
+        <section id="contact" className="section contact-section">
+          <div className="wrap contact-layout">
+            <div>
+              <p className="eyebrow">Contact</p>
+              <h2>Let’s discuss your project</h2>
+              <p>Tell us what you’re building, what’s getting in the way, or where you need engineering support.</p>
+            </div>
+            <a className="button button-primary" href="mailto:info@lambdatechaus.com">
+              info@lambdatechaus.com <span aria-hidden="true">↗</span>
             </a>
-            <a className="contact-link" href="https://www.lambdatechaus.com">
-              www.lambdatechaus.com
-            </a>
-            <p>Australia</p>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
       <footer className="site-footer">
-        <span>&copy; {new Date().getFullYear()} Lambda Technologies Pty Ltd</span>
-        <a href="mailto:info@lambdatechaus.com">info@lambdatechaus.com</a>
+        <div className="wrap footer-inner">
+          <span>&copy; {new Date().getFullYear()} Lambda Technologies Pty Ltd</span>
+          <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+        </div>
       </footer>
-    </main>
+    </>
   );
 }
