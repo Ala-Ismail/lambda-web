@@ -66,6 +66,7 @@ const navigation = [
   ["Capabilities", "#capabilities"],
   ["Services", "#services"],
   ["Products", "#products"],
+  ["White Paper", "https://bbr-web-five.vercel.app/"],
   ["About", "#about"],
   ["Contact", "#contact"]
 ];
