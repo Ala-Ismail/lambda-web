@@ -196,7 +196,7 @@ h3 {
 }
 
 .hero .eyebrow,
-.sld-accelerator-section .eyebrow,
+.sld-accelerator-card .eyebrow,
 .contact-section .eyebrow {
   color: var(--accent);
 }
@@ -357,7 +357,6 @@ h3 {
 .section-heading,
 .services-layout,
 .about-layout,
-.sld-accelerator-layout,
 .contact-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
@@ -537,14 +536,17 @@ h3 {
   color: var(--accent-ink);
 }
 
-.sld-accelerator-section {
+.sld-accelerator-card {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+  align-items: center;
   color: var(--white);
   background: var(--night-deep);
 }
 
-.sld-accelerator-layout {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
-  align-items: center;
+.sld-accelerator-copy {
+  padding: clamp(22px, 4vw, 48px);
 }
 
 .sld-accelerator-description {
@@ -557,9 +559,7 @@ h3 {
 .sld-accelerator-image {
   position: relative;
   aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border: 1px solid #ffffff26;
-  border-radius: 12px;
+  align-self: stretch;
   background: var(--night);
 }
 
@@ -620,7 +620,7 @@ h3 {
   .section-heading,
   .services-layout,
   .about-layout,
-  .sld-accelerator-layout,
+  .sld-accelerator-card,
   .contact-layout,
   .product-grid {
     grid-template-columns: 1fr;

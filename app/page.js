@@ -253,27 +253,24 @@ export default function Home() {
                   </div>
                 </div>
               </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="sld-accelerator" className="section sld-accelerator-section" aria-labelledby="sld-accelerator-title">
-          <div className="wrap sld-accelerator-layout">
-            <div>
-              <p className="eyebrow">Proprietary Lambda Technologies product</p>
-              <h2 id="sld-accelerator-title">SLD Accelerator</h2>
-              <p className="sld-accelerator-description">
-                Automates Single Line Diagram drafting so telecommunications teams can produce
-                network drawings faster. Public demos are unavailable.
-              </p>
-            </div>
-            <div className="sld-accelerator-image">
-              <Image
-                src="/images/sld-accelerator-telecom-bg.png"
-                alt="Illustration of a telecommunications drafting workstation with network maps and diagrams"
-                fill
-                sizes="(max-width: 780px) 90vw, (max-width: 1328px) 50vw, 650px"
-              />
+              <section id="sld-accelerator" className="product-card sld-accelerator-card" aria-labelledby="sld-accelerator-title">
+                <div className="sld-accelerator-copy">
+                  <p className="eyebrow">Proprietary Lambda Technologies product</p>
+                  <h3 id="sld-accelerator-title">SLD Accelerator</h3>
+                  <p className="sld-accelerator-description">
+                    Automates Single Line Diagram drafting so telecommunications teams can produce
+                    network drawings faster. Public demos are unavailable.
+                  </p>
+                </div>
+                <div className="sld-accelerator-image">
+                  <Image
+                    src="/images/sld-accelerator-telecom-bg.png"
+                    alt="Illustration of a telecommunications drafting workstation with network maps and diagrams"
+                    fill
+                    sizes="(max-width: 780px) 90vw, (max-width: 1328px) 52vw, 690px"
+                  />
+                </div>
+              </section>
             </div>
           </div>
         </section>
