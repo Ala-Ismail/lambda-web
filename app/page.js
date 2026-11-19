@@ -169,6 +169,9 @@ export default function Home() {
                 <p className="eyebrow">Products &amp; projects</p>
                 <h2>Tools for engineering drawings and models</h2>
               </div>
+              <p>
+                <a href="#contact">Contact us</a> to explore enterprise support options for our open-source tools.
+              </p>
             </div>
             <div className="product-grid">
               <article className="product-card">
