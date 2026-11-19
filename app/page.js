@@ -258,8 +258,8 @@ export default function Home() {
                   <p className="eyebrow">Proprietary Lambda Technologies product</p>
                   <h3 id="sld-accelerator-title">SLD Accelerator</h3>
                   <p className="sld-accelerator-description">
-                    Automates Single Line Diagram drafting so telecommunications teams can produce
-                    network drawings faster. Public demos are unavailable.
+                    Brings design analysis, impact assessment, and Single Line Diagram (SLD) creation
+                    into one workflow for telecommunications teams. Public demos are unavailable.
                   </p>
                 </div>
                 <div className="sld-accelerator-image">
