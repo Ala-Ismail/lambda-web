@@ -77,11 +77,8 @@ export default function Home() {
       <header id="top" className="site-header">
         <div className="wrap header-inner">
           <a className="brand" href="#top" aria-label="Lambda Technologies home">
-            <span className="brand-mark" aria-hidden="true">&lambda;</span>
-            <span>
-              <strong>Lambda Technologies</strong>
-              <small>Pty Ltd</small>
-            </span>
+            <strong>Lambda Technologies</strong>
+            <small>Pty Ltd</small>
           </a>
           <nav className="site-nav" aria-label="Primary">
             {navigation.map(([label, href]) => (

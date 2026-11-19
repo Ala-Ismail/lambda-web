@@ -88,24 +88,8 @@ h3 {
 }
 
 .brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
   text-decoration: none;
   line-height: 1.1;
-}
-
-.brand-mark {
-  display: grid;
-  width: 41px;
-  height: 41px;
-  flex: none;
-  place-items: center;
-  border-radius: 8px;
-  color: var(--night-deep);
-  background: var(--accent);
-  font-size: 30px;
-  line-height: 1;
 }
 
 .brand strong,
