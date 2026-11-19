@@ -178,7 +178,7 @@ export default function Home() {
                     alt="12dAZ Converter showing a road plan and DXF export settings"
                     width={1200}
                     height={742}
-                    sizes="(max-width: 780px) 95vw, (max-width: 1328px) 45vw, 590px"
+                    sizes="(max-width: 780px) 95vw, 33vw"
                   />
                 </div>
                 <div className="card-copy">
@@ -196,12 +196,12 @@ export default function Home() {
                 </div>
               </article>
               <article className="product-card">
-                <figure className="product-image product-illustration ccmap-image">
+                <figure className="product-image ccmap-image">
                   <Image
                     src="/images/ccmap-synthetic-satellite.webp"
                     alt="Illustrated CADCraft workspace showing yellow property boundaries over fictional satellite imagery"
                     fill
-                    sizes="(max-width: 780px) 95vw, (max-width: 1328px) 45vw, 590px"
+                    sizes="(max-width: 780px) 95vw, 33vw"
                   />
                   <figcaption>Illustrative CADCraft view</figcaption>
                 </figure>
@@ -232,7 +232,7 @@ export default function Home() {
                     alt="An example PID speed control diagram and its block properties"
                     width={1536}
                     height={1024}
-                    sizes="(max-width: 780px) 95vw, (max-width: 1328px) 45vw, 590px"
+                    sizes="(max-width: 780px) 95vw, 33vw"
                   />
                 </div>
                 <div className="card-copy">
@@ -253,24 +253,27 @@ export default function Home() {
                   </div>
                 </div>
               </article>
-              <article className="product-card">
-                <div className="product-image product-illustration sld-accelerator-image">
-                  <Image
-                    src="/images/sld-accelerator-telecom-bg.png"
-                    alt="Illustration of a telecommunications drafting workstation with network maps and diagrams"
-                    fill
-                    sizes="(max-width: 780px) 95vw, (max-width: 1328px) 45vw, 590px"
-                  />
-                </div>
-                <div className="card-copy">
-                  <p className="eyebrow">Proprietary Lambda Technologies product</p>
-                  <h3>SLD Accelerator</h3>
-                  <p>
-                    Automates Single Line Diagram drafting so telecommunications teams can produce
-                    network drawings faster. Public demos are unavailable.
-                  </p>
-                </div>
-              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="sld-accelerator" className="section sld-accelerator-section" aria-labelledby="sld-accelerator-title">
+          <div className="wrap sld-accelerator-layout">
+            <div>
+              <p className="eyebrow">Proprietary Lambda Technologies product</p>
+              <h2 id="sld-accelerator-title">SLD Accelerator</h2>
+              <p className="sld-accelerator-description">
+                Automates Single Line Diagram drafting so telecommunications teams can produce
+                network drawings faster. Public demos are unavailable.
+              </p>
+            </div>
+            <div className="sld-accelerator-image">
+              <Image
+                src="/images/sld-accelerator-telecom-bg.png"
+                alt="Illustration of a telecommunications drafting workstation with network maps and diagrams"
+                fill
+                sizes="(max-width: 780px) 90vw, (max-width: 1328px) 50vw, 650px"
+              />
             </div>
           </div>
         </section>

@@ -196,6 +196,7 @@ h3 {
 }
 
 .hero .eyebrow,
+.sld-accelerator-section .eyebrow,
 .contact-section .eyebrow {
   color: var(--accent);
 }
@@ -356,6 +357,7 @@ h3 {
 .section-heading,
 .services-layout,
 .about-layout,
+.sld-accelerator-layout,
 .contact-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
@@ -449,7 +451,7 @@ h3 {
 }
 
 .product-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .product-image {
@@ -476,26 +478,15 @@ h3 {
   box-shadow: 0 12px 28px #08121f70;
 }
 
-.product-illustration {
+.ccmap-image {
   position: relative;
   margin: 0;
   padding: 0;
-}
-
-.product-illustration img {
-  object-fit: cover;
-}
-
-.ccmap-image {
   background: #1d343b;
 }
 
-.sld-accelerator-image {
-  background: var(--night);
-}
-
-.sld-accelerator-image img {
-  object-position: right center;
+.ccmap-image img {
+  object-fit: cover;
 }
 
 .ccmap-image figcaption {
@@ -544,6 +535,37 @@ h3 {
 
 .text-link:hover {
   color: var(--accent-ink);
+}
+
+.sld-accelerator-section {
+  color: var(--white);
+  background: var(--night-deep);
+}
+
+.sld-accelerator-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+  align-items: center;
+}
+
+.sld-accelerator-description {
+  max-width: 46ch;
+  margin-top: 16px;
+  color: #c6d4e4;
+  font-size: 17px;
+}
+
+.sld-accelerator-image {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid #ffffff26;
+  border-radius: 12px;
+  background: var(--night);
+}
+
+.sld-accelerator-image img {
+  object-fit: cover;
+  object-position: right center;
 }
 
 .about-section {
@@ -598,6 +620,7 @@ h3 {
   .section-heading,
   .services-layout,
   .about-layout,
+  .sld-accelerator-layout,
   .contact-layout,
   .product-grid {
     grid-template-columns: 1fr;
