@@ -449,7 +449,7 @@ h3 {
 }
 
 .product-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .product-image {
@@ -476,15 +476,26 @@ h3 {
   box-shadow: 0 12px 28px #08121f70;
 }
 
-.ccmap-image {
+.product-illustration {
   position: relative;
   margin: 0;
   padding: 0;
+}
+
+.product-illustration img {
+  object-fit: cover;
+}
+
+.ccmap-image {
   background: #1d343b;
 }
 
-.ccmap-image img {
-  object-fit: cover;
+.sld-accelerator-image {
+  background: var(--night);
+}
+
+.sld-accelerator-image img {
+  object-position: right center;
 }
 
 .ccmap-image figcaption {
