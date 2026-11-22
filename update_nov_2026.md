@@ -23,7 +23,7 @@ Replace the single background image at the top of the homepage with exactly thre
 
 ### 12dAZ Converter
 
-Replace the featured SLD Accelerator panel with a 12dAZ Converter panel. Describe it as Lambda Technologies’ product for converting `.12daz` and `.12da` files to 2D and 3D DXF. Use the button label “Visit 12dAZ Converter” and point it to the [12dAZ Converter product site](https://12daz-app-website.vercel.app/).
+Replace the featured SLD Accelerator panel with a 12dAZ Converter panel. Describe it as Lambda Technologies’ product for converting `.12daz` and `.12da` files to editable DXF, with Flatten 2D and Keep Z options. Explain that both editions offer Windows x64 ZIPs. The open-source Python edition also offers MIT-licensed source, and the closed-source Rust edition adds background maps, MGA projection suggestions and a skipped-geometry preview. Use “Visit 12dAZ Converter” to link to the [12dAZ Converter download site](https://12daz-downloads-website.vercel.app/).
 
 Remove the outbound link to `sld-accelerator.com`. Update the featured section’s heading and imagery to suit the converter. Keep the Products navigation link and the existing `#products` anchor. Keep Single Line Diagram drafting in the services copy where it describes work Lambda Technologies offers.
 

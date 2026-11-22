@@ -185,11 +185,17 @@ export default function Home() {
                   <p className="eyebrow">Lambda Technologies product</p>
                   <h3>12dAZ Converter</h3>
                   <p>
-                    An open-source application available to the public for converting 12d Model survey
-                    files in <code>.12daz</code> and <code>.12da</code> format to 2D and 3D DXF for use in CAD.
+                    Convert <code>.12daz</code> and <code>.12da</code> survey files to editable DXF for CAD.
+                    Flatten to 2D or keep supported elevations.
+                  </p>
+                  <p>
+                    Both editions offer a Windows x64 ZIP. The <strong>open-source Python edition</strong>{" "}
+                    also offers its MIT-licensed source. The <strong>closed-source Rust edition</strong>{" "}
+                    adds background maps, MGA projection suggestions and a preview of geometry that would
+                    be skipped during export.
                   </p>
                   <div className="product-links">
-                    <a className="text-link" href="https://12daz-app-website.vercel.app/">
+                    <a className="text-link" href="https://12daz-downloads-website.vercel.app/">
                       Visit 12dAZ Converter <span aria-hidden="true">↗</span>
                     </a>
                   </div>
