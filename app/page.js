@@ -155,18 +155,9 @@ export default function Home() {
                   />
                 </div>
                 <div className="card-copy">
-                  <p className="eyebrow">Under development</p>
+                  <p className="eyebrow">Field test</p>
                   <h3>12dAZ Converter</h3>
-                  <p>
-                    Convert <code>.12daz</code> and <code>.12da</code> survey files to editable DXF 2018 on
-                    Windows. Conversion runs offline, including in air-gapped environments, without 12d
-                    Model or AutoCAD. Flatten to 2D or keep supported source elevations.
-                  </p>
-                  <p>
-                    In connected environments, preview government planning layers over aligned survey
-                    drawings or DXF and DWG 2018 files. Export supported layers as PDF reports or
-                    survey-aligned DXF, and use Australian MGA or Brisbane City Survey Grid for map alignment.
-                  </p>
+                  <p>Integrated Converter platform.</p>
                 </div>
               </article>
               <article className="product-card">
