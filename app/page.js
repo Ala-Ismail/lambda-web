@@ -180,14 +180,6 @@ export default function Home() {
                     The maps provide a view-only reference that can align with Australian MGA
                     coordinates while leaving drawing geometry and exports unchanged.
                   </p>
-                  <div className="product-links">
-                    <a className="text-link" href="https://github.com/Ala-Ismail/CCMap">
-                      View CCMap on GitHub <span aria-hidden="true">↗</span>
-                    </a>
-                    <a className="text-link" href="https://github.com/Ala-Ismail/CCMap#map-backgrounds">
-                      Map setup <span aria-hidden="true">↗</span>
-                    </a>
-                  </div>
                 </div>
               </article>
               <section id="sld-accelerator" className="product-card sld-accelerator-card" aria-labelledby="sld-accelerator-title">
