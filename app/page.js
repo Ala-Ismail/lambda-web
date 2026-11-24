@@ -9,7 +9,7 @@ const capabilityImages = {
 
 const heroSlides = [
   { label: "CAD automation", image: capabilityImages.cad, position: "72% center" },
-  { label: "Telecommunications CAD", image: capabilityImages.telecom, position: "72% center" },
+  { label: "Telecommunications", image: "/images/telecommunications-hero.webp", position: "72% center" },
   { label: "Custom mapping", image: capabilityImages.infrastructure, position: "72% center" }
 ];
 
@@ -20,8 +20,8 @@ const capabilities = [
     image: capabilityImages.cad
   },
   {
-    title: "Telecommunications CAD solutions",
-    body: "We build CAD tools and workflows for creating network drawings and single-line diagrams, documenting proposed changes and assessing their impact on existing designs.",
+    title: "Telecommunications drafting",
+    body: "We prepare network drawings and single-line diagrams and document proposed changes.",
     image: capabilityImages.telecom
   },
   {
@@ -158,13 +158,14 @@ export default function Home() {
                   <p className="eyebrow">Under development</p>
                   <h3>12dAZ Converter</h3>
                   <p>
-                    Convert <code>.12daz</code> and <code>.12da</code> survey files to editable DXF offline,
-                    including in air-gapped environments. Flatten to 2D or keep supported elevations.
+                    Convert <code>.12daz</code> and <code>.12da</code> survey files to editable DXF 2018 on
+                    Windows. Conversion runs offline, including in air-gapped environments, without 12d
+                    Model or AutoCAD. Flatten to 2D or keep supported source elevations.
                   </p>
                   <p>
-                    The Windows x64 app is being developed to integrate with government mapping
-                    services for map backgrounds in connected environments. It also provides MGA
-                    projection suggestions and previews geometry that would be skipped during export.
+                    In connected environments, preview government planning layers over aligned survey
+                    drawings or DXF and DWG 2018 files. Export supported layers as PDF reports or
+                    survey-aligned DXF, and use Australian MGA or Brisbane City Survey Grid for map alignment.
                   </p>
                 </div>
               </article>
