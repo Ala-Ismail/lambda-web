@@ -2,63 +2,47 @@ import Image from "next/image";
 import HeroSlideshow from "./hero-slideshow";
 
 const capabilityImages = {
-  fpga: "/images/fpga-development-hero.webp",
   telecom: "/images/telecommunications-hero.webp",
-  cad: "/images/cad-drafting-hero.webp"
+  cad: "/images/cad-drafting-hero.webp",
+  infrastructure: "/images/cad-infrastructure-collage.webp"
 };
 
 const heroSlides = [
-  { label: "FPGA development", image: capabilityImages.fpga, position: "68% center" },
-  { label: "Telecommunications", image: capabilityImages.telecom, position: "72% center" },
-  { label: "CAD & civil infrastructure", image: "/images/cad-infrastructure-collage.webp", position: "72% center" }
+  { label: "CAD & civil infrastructure", image: capabilityImages.infrastructure, position: "72% center" },
+  { label: "CAD drafting", image: capabilityImages.cad, position: "72% center" },
+  { label: "Telecommunications", image: capabilityImages.telecom, position: "72% center" }
 ];
 
 const capabilities = [
-  {
-    title: "FPGA and embedded systems",
-    body: "We develop Verilog and VHDL designs, write embedded firmware, and support hardware bring-up, timing closure and system integration.",
-    image: capabilityImages.fpga
-  },
   {
     title: "CAD and drafting automation",
     body: "We build AutoCAD and BricsCAD tools, including LISP routines, to automate drawing production, extract drawing data and process markups.",
     image: capabilityImages.cad
   },
   {
+    title: "Custom mapping solutions",
+    body: "We build tools that bring street maps and aerial imagery into CAD and align map backgrounds with survey drawings and Australian MGA coordinates.",
+    image: capabilityImages.infrastructure
+  },
+  {
     title: "Telecommunications drafting",
     body: "We prepare network drawings and Single Line Diagrams, document proposed changes and assess their impact on existing designs.",
     image: capabilityImages.telecom
-  },
-  {
-    title: "Interfaces and protocols",
-    body: "We implement and validate SPI, UART and I²C interfaces and serial encoder protocols including EnDat, BiSS and HIPERFACE DSL."
-  },
-  {
-    title: "Functional safety engineering support",
-    body: "We support the design, integration and validation of industrial safety functions and communications, including FSoE, safe torque off (STO), safe stop 1 (SS1) and safety I/O diagnostics."
-  },
-  {
-    title: "Altera and Intel FPGA platforms",
-    body: "We develop and maintain Quartus projects, support migrations and design Remote System Update workflows."
-  },
-  {
-    title: "Custom engineering software",
-    body: "We build tools that connect engineering systems, convert files and automate repeatable project tasks."
   }
 ];
 
 const services = [
   {
     title: "Design and delivery",
-    body: "Bring us in for a defined engineering, drafting or automation package, from initial scoping through implementation and handover."
+    body: "Scope and deliver a CAD automation, mapping or drafting project, from requirements through implementation and handover."
   },
   {
     title: "Integration and troubleshooting",
-    body: "Get focused support with hardware bring-up, interface validation, fault investigation or a difficult system integration."
+    body: "Get help connecting CAD and mapping tools, aligning map backgrounds and resolving drawing or file conversion issues."
   },
   {
     title: "Maintenance and migration",
-    body: "Keep existing designs working with legacy FPGA support, remote update planning, and improvements to drafting and software workflows."
+    body: "Maintain existing drafting tools and migrate drawings and automation routines to new software or workflows."
   }
 ];
 
@@ -66,7 +50,6 @@ const navigation = [
   ["Capabilities", "#capabilities"],
   ["Services", "#services"],
   ["Products", "#products"],
-  ["White Paper", "https://bbr-web-five.vercel.app/"],
   ["About", "#about"],
   ["Contact", "#contact"]
 ];
@@ -91,10 +74,10 @@ export default function Home() {
       <main>
         <HeroSlideshow slides={heroSlides}>
           <p className="eyebrow">Engineering &amp; automation</p>
-          <h1>From embedded systems to engineering drawings.</h1>
+          <h1>CAD automation and custom mapping solutions</h1>
           <p className="hero-summary">
-            Lambda Technologies designs and integrates FPGA and embedded systems, automates CAD
-            workflows, and produces technical documentation for telecommunications networks.
+            Lambda Technologies builds drafting tools, automates survey file conversion and brings
+            map backgrounds into CAD workflows.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="mailto:info@lambdatechaus.com">
@@ -111,15 +94,15 @@ export default function Home() {
             <div className="section-heading">
               <div>
                 <p className="eyebrow">Capabilities</p>
-                <h2>FPGA development, CAD automation and telecom drafting</h2>
+                <h2>CAD tools, map integration and network drafting</h2>
               </div>
               <p>
-                We help engineering teams bring up new hardware, diagnose integration issues,
-                automate drawing production and maintain existing systems.
+                We build software around the drawings and data your team works with, from survey
+                files and civil plans to telecommunications network designs.
               </p>
             </div>
             <div className="capability-grid">
-              {capabilities.slice(0, 3).map(({ title, body, image }) => (
+              {capabilities.map(({ title, body, image }) => (
                 <article className="capability-card" key={title}>
                   <div className="capability-image">
                     <Image src={image} alt="" fill sizes="(max-width: 680px) 100vw, 33vw" />
@@ -128,14 +111,6 @@ export default function Home() {
                     <h3>{title}</h3>
                     <p>{body}</p>
                   </div>
-                </article>
-              ))}
-            </div>
-            <div className="specialty-grid">
-              {capabilities.slice(3).map(({ title, body }) => (
-                <article key={title}>
-                  <h3>{title}</h3>
-                  <p>{body}</p>
                 </article>
               ))}
             </div>
@@ -164,7 +139,7 @@ export default function Home() {
             <div className="section-heading">
               <div>
                 <p className="eyebrow">Products &amp; projects</p>
-                <h2>Tools for engineering drawings and models</h2>
+                <h2>Tools for drawings, maps and engineering models</h2>
               </div>
               <p>
                 <a href="#contact">Contact us</a> to explore enterprise support options for our open-source tools.
@@ -178,27 +153,22 @@ export default function Home() {
                     alt="12dAZ Converter showing a road plan and DXF export settings"
                     width={1200}
                     height={742}
-                    sizes="(max-width: 780px) 95vw, 33vw"
+                    sizes="(max-width: 780px) 95vw, 50vw"
                   />
                 </div>
                 <div className="card-copy">
-                  <p className="eyebrow">Lambda Technologies product</p>
+                  <p className="eyebrow">Under development</p>
                   <h3>12dAZ Converter</h3>
                   <p>
                     Convert <code>.12daz</code> and <code>.12da</code> survey files to editable DXF for CAD.
                     Flatten to 2D or keep supported elevations.
                   </p>
                   <p>
-                    Both editions offer a Windows x64 ZIP. The <strong>open-source Python edition</strong>{" "}
-                    also offers its MIT-licensed source. The <strong>closed-source Rust edition</strong>{" "}
+                    The converter has two Windows x64 editions. The <strong>open-source Python edition</strong>{" "}
+                    uses the MIT license. The <strong>closed-source Rust edition</strong>{" "}
                     adds background maps, MGA projection suggestions and a preview of geometry that would
                     be skipped during export.
                   </p>
-                  <div className="product-links">
-                    <a className="text-link" href="https://12daz-downloads-website.vercel.app/">
-                      Visit 12dAZ Converter <span aria-hidden="true">↗</span>
-                    </a>
-                  </div>
                 </div>
               </article>
               <article className="product-card">
@@ -207,7 +177,7 @@ export default function Home() {
                     src="/images/ccmap-synthetic-satellite.webp"
                     alt="Illustrated CADCraft workspace showing yellow property boundaries over fictional satellite imagery"
                     fill
-                    sizes="(max-width: 780px) 95vw, 33vw"
+                    sizes="(max-width: 780px) 95vw, 50vw"
                   />
                   <figcaption>Illustrative CADCraft view</figcaption>
                 </figure>
@@ -227,34 +197,6 @@ export default function Home() {
                     </a>
                     <a className="text-link" href="https://github.com/Ala-Ismail/CCMap#map-backgrounds">
                       Map setup <span aria-hidden="true">↗</span>
-                    </a>
-                  </div>
-                </div>
-              </article>
-              <article className="product-card">
-                <div className="product-image product-screenshot">
-                  <Image
-                    src="/images/slx-viewer.webp"
-                    alt="An example PID speed control diagram and its block properties"
-                    width={1536}
-                    height={1024}
-                    sizes="(max-width: 780px) 95vw, 33vw"
-                  />
-                </div>
-                <div className="card-copy">
-                  <p className="eyebrow">Lambda Technologies product</p>
-                  <h3>SLX Explorer</h3>
-                  <p>
-                    An open-source, read-only Windows app for inspecting saved Simulink <code>.slx</code>{" "}
-                    models offline. Browse subsystems, trace signals and inspect block properties without
-                    installing MATLAB or Simulink.
-                  </p>
-                  <div className="product-links">
-                    <a className="text-link" href="https://slxexplorer-website.vercel.app/">
-                      Visit SLX Explorer <span aria-hidden="true">↗</span>
-                    </a>
-                    <a className="text-link" href="https://github.com/Ala-Ismail/slx_explorer">
-                      View source on GitHub <span aria-hidden="true">↗</span>
                     </a>
                   </div>
                 </div>
@@ -288,9 +230,9 @@ export default function Home() {
               <h2>Engineering support from Australia</h2>
             </div>
             <p>
-              Lambda Technologies Pty Ltd works with teams across embedded development,
-              CAD automation and telecommunications drafting. We work through the constraints
-              with your team and deliver designs, drawings or software you can maintain after handover.
+              Lambda Technologies Pty Ltd develops custom CAD and mapping tools in Australia and
+              provides telecommunications drafting support. We work with your team to deliver drawings
+              and software you can maintain after handover.
             </p>
           </div>
         </section>
