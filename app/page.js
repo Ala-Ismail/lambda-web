@@ -2,39 +2,39 @@ import Image from "next/image";
 import HeroSlideshow from "./hero-slideshow";
 
 const capabilityImages = {
-  telecom: "/images/telecommunications-hero.webp",
+  telecom: "/images/sld-accelerator-telecom-bg.png",
   cad: "/images/cad-drafting-hero.webp",
   infrastructure: "/images/cad-infrastructure-collage.webp"
 };
 
 const heroSlides = [
-  { label: "CAD & civil infrastructure", image: capabilityImages.infrastructure, position: "72% center" },
-  { label: "CAD drafting", image: capabilityImages.cad, position: "72% center" },
-  { label: "Telecommunications", image: capabilityImages.telecom, position: "72% center" }
+  { label: "CAD automation", image: capabilityImages.cad, position: "72% center" },
+  { label: "Telecommunications CAD", image: capabilityImages.telecom, position: "72% center" },
+  { label: "Custom mapping", image: capabilityImages.infrastructure, position: "72% center" }
 ];
 
 const capabilities = [
   {
-    title: "CAD and drafting automation",
+    title: "CAD automation",
     body: "We build AutoCAD and BricsCAD tools, including LISP routines, to automate drawing production, extract drawing data and process markups.",
     image: capabilityImages.cad
+  },
+  {
+    title: "Telecommunications CAD solutions",
+    body: "We build CAD tools and workflows for creating network drawings and single-line diagrams, documenting proposed changes and assessing their impact on existing designs.",
+    image: capabilityImages.telecom
   },
   {
     title: "Custom mapping solutions",
     body: "We build tools that bring street maps and aerial imagery into CAD and align map backgrounds with survey drawings and Australian MGA coordinates.",
     image: capabilityImages.infrastructure
-  },
-  {
-    title: "Telecommunications drafting",
-    body: "We prepare network drawings and Single Line Diagrams, document proposed changes and assess their impact on existing designs.",
-    image: capabilityImages.telecom
   }
 ];
 
 const services = [
   {
     title: "Design and delivery",
-    body: "Scope and deliver a CAD automation, mapping or drafting project, from requirements through implementation and handover."
+    body: "Develop CAD automation routines, telecommunications drawing workflows or custom mapping tools, from requirements through implementation and handover."
   },
   {
     title: "Integration and troubleshooting",
@@ -73,11 +73,10 @@ export default function Home() {
 
       <main>
         <HeroSlideshow slides={heroSlides}>
-          <p className="eyebrow">Engineering &amp; automation</p>
-          <h1>CAD automation and custom mapping solutions</h1>
+          <h1>CAD automation, telecom design and custom mapping</h1>
           <p className="hero-summary">
-            Lambda Technologies builds drafting tools, automates survey file conversion and brings
-            map backgrounds into CAD workflows.
+            Lambda Technologies builds tools that automate drafting, help telecommunications teams
+            produce network drawings and bring street maps and aerial imagery into CAD.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="mailto:info@lambdatechaus.com">
@@ -94,11 +93,10 @@ export default function Home() {
             <div className="section-heading">
               <div>
                 <p className="eyebrow">Capabilities</p>
-                <h2>CAD tools, map integration and network drafting</h2>
+                <h2>Tools for drawings, networks and maps</h2>
               </div>
               <p>
-                We build software around the drawings and data your team works with, from survey
-                files and civil plans to telecommunications network designs.
+                We develop tools around your existing software, drawing standards and project data.
               </p>
             </div>
             <div className="capability-grid">
@@ -160,14 +158,13 @@ export default function Home() {
                   <p className="eyebrow">Under development</p>
                   <h3>12dAZ Converter</h3>
                   <p>
-                    Convert <code>.12daz</code> and <code>.12da</code> survey files to editable DXF for CAD.
-                    Flatten to 2D or keep supported elevations.
+                    Convert <code>.12daz</code> and <code>.12da</code> survey files to editable DXF offline,
+                    including in air-gapped environments. Flatten to 2D or keep supported elevations.
                   </p>
                   <p>
-                    The converter has two Windows x64 editions. The <strong>open-source Python edition</strong>{" "}
-                    uses the MIT license. The <strong>closed-source Rust edition</strong>{" "}
-                    adds background maps, MGA projection suggestions and a preview of geometry that would
-                    be skipped during export.
+                    The Windows x64 app is being developed to integrate with government mapping
+                    services for map backgrounds in connected environments. It also provides MGA
+                    projection suggestions and previews geometry that would be skipped during export.
                   </p>
                 </div>
               </article>
@@ -206,13 +203,13 @@ export default function Home() {
                   <p className="eyebrow">Proprietary Lambda Technologies product</p>
                   <h3 id="sld-accelerator-title">SLD Accelerator</h3>
                   <p className="sld-accelerator-description">
-                    Brings design analysis, impact assessment, and Single Line Diagram (SLD) creation
-                    into one workflow for telecommunications teams. Public demos are unavailable.
+                    A telecommunications CAD tool that combines design analysis, change impact
+                    assessment and single-line diagram creation. Public demos are unavailable.
                   </p>
                 </div>
                 <div className="sld-accelerator-image">
                   <Image
-                    src="/images/sld-accelerator-telecom-bg.png"
+                    src={capabilityImages.telecom}
                     alt="Illustration of a telecommunications drafting workstation with network maps and diagrams"
                     fill
                     sizes="(max-width: 780px) 90vw, (max-width: 1328px) 52vw, 690px"
@@ -227,12 +224,12 @@ export default function Home() {
           <div className="wrap about-layout">
             <div>
               <p className="eyebrow">About</p>
-              <h2>Engineering support from Australia</h2>
+              <h2>Australian CAD and mapping specialists</h2>
             </div>
             <p>
-              Lambda Technologies Pty Ltd develops custom CAD and mapping tools in Australia and
-              provides telecommunications drafting support. We work with your team to deliver drawings
-              and software you can maintain after handover.
+              Lambda Technologies Pty Ltd develops CAD automation, telecommunications drawing tools
+              and custom mapping software in Australia. We work with your team to deliver tools you
+              can maintain after handover.
             </p>
           </div>
         </section>
@@ -242,7 +239,7 @@ export default function Home() {
             <div>
               <p className="eyebrow">Contact</p>
               <h2>Let’s discuss your project</h2>
-              <p>Tell us what you’re building, what’s getting in the way, or where you need engineering support.</p>
+              <p>Tell us about your drafting workflow, network drawings or mapping requirements.</p>
             </div>
             <a className="button button-primary" href="mailto:info@lambdatechaus.com">
               info@lambdatechaus.com <span aria-hidden="true">↗</span>

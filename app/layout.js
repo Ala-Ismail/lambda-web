@@ -5,13 +5,14 @@ const siteUrl = "https://www.lambdatechaus.com";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Lambda Technologies | CAD Automation and Custom Mapping",
+    default: "Lambda Technologies | CAD Automation, Telecom CAD and Mapping",
     template: "%s | Lambda Technologies Pty Ltd"
   },
   description:
-    "Australian CAD automation and custom mapping solutions. Lambda Technologies builds drafting tools, integrates map backgrounds and supports telecommunications drafting.",
+    "Australian CAD automation, telecommunications CAD solutions and custom mapping. We build drafting tools, network drawing workflows and CAD map integrations.",
   keywords: [
     "CAD automation",
+    "telecommunications CAD solutions",
     "custom mapping solutions",
     "CAD map integration",
     "survey file conversion",
@@ -31,7 +32,7 @@ export const metadata = {
     url: siteUrl,
     title: "Lambda Technologies Pty Ltd",
     description:
-      "Australian CAD automation and custom mapping for survey drawings, civil plans and telecommunications networks.",
+      "CAD automation, network drawing tools for telecommunications teams and custom mapping for CAD workflows.",
     siteName: "Lambda Technologies Pty Ltd",
     images: [
       {
